@@ -1,0 +1,10 @@
+mixin tags(tags, description)
+    each val in tags_db
+        .title_container_content(class=val.id2)
+            p.tags(class=val.id)= val.tags
+            p.description(class=val.description_id)= val.description
+
+include db
+
+    .title_container
+            +tags

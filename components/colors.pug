@@ -1,0 +1,11 @@
+mixin colortitle(colortitle, rgbtitle)
+  .color_container
+      each val in db_array
+          .color_container_content
+            .block(class=val.id)
+            .text(class=val.textid)
+              p.title(class=val.id2)= val.title
+              p.rgbtitle(class=val.rgb_id)= val.rgbtitle
+
+include db
+            +colortitle
